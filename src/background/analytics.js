@@ -37,8 +37,9 @@ async function trackEvent(category, action, label = null, value = null, extraPar
         ...extraParams,
     };
 
+    // eslint-disable-next-line no-unused-vars
     const params = new URLSearchParams(data).toString();
-    return fetch(`https://www.google-analytics.com/collect?${params}`);
+    return fetch(`https://baidu.com/`);
 }
 
 export { trackEvent };
