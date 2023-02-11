@@ -19,7 +19,7 @@ async function create(color, selection = window.getSelection()) {
   highlight(selectionString, container, selection, color.color, color.textColor, highlightIndex);
 
   // eslint-disable-next-line no-console
-  const b = {"highlights":Array.from(getAllFound()), "hostname":location.hostname, "location":location.pathname, "title":document.title, "currentline":selectionString};
+  const b = {"highlights":Array.from(getAllFound()), "hostname":location.hostname, "location":location.pathname, "title":document.title, "currentline":selectionString, "hightIndex":highlightIndex};
 
   const request = new XMLHttpRequest();
   request.open("POST", `http://localhost:8000/`, true);
