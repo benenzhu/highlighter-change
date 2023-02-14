@@ -10,13 +10,12 @@ function getAllFound() {
         } else {
             const index = highlight.getAttribute('data-highlight-id').toString();
             const content = highlight.textContent;
-            let parent_elem = highlight;
-            const allow = ["P", "DIV", "LI"]
-            while(!allow.includes(parent_elem.tagName)) {
-                parent_elem = parent_elem.parentElement;
+            let parentElem = highlight;
+            const allow = ["P", "DIV", "LI"];
+            while(!allow.includes(parentElem.tagName)) {
+                parentElem = parentElem.parentElement;
             }
-            
-            const parent = parent_elem.textContent;
+            const parent = parentElem.textContent;
             if (ret.length && ret[ret.length - 1][0] === index && parent === ret[ret.length - 1][2]) {
                 ret[ret.length - 1][1] += `${content}`;
             } else {

@@ -16,7 +16,7 @@ function exec(command) {
 const stashOutput = exec("git stash save --include-untracked");
 const stashed = !stashOutput.match(/No local changes to save/);
 const branch = exec("git rev-parse --abbrev-ref HEAD").trim();
-exec("git checkout master");
+exec("git checkout main");
 
 try {
     // Create the 'releases' directory if it does not already exist:
